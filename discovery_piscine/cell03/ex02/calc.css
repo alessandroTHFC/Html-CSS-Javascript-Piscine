@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgb(26, 15, 2);
+
+}
+
+.calc {
+    display: grid;
+    position: absolute;
+    height: 600px;
+    width: 380px;
+    background-color: grey;
+    border-radius: 20px;
+    justify-content: center;
+    box-shadow: inset -8px 0 8px rgba(0, 0, 0, 0.15),
+    inset 0 -8px 8px rgba(0, 0, 0, 0.25), 0 0 0 2px rgba(0, 0, 0, 0.75),
+    10px 20px 25px rgba(0, 0, 0, 0.4);
+}
+
+.calc .screen {
+    margin: 20px;
+    height: 160px;
+    width: 325px;
+    background-color: rgb(152, 179, 131);
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.75),
+    10px 20px 25px rgba(0, 0, 0, 0.4);
+    border-radius: 9px;
+    text-align: right;
+    font-size: 70px;
+}
+
+button {
+    height:70px;
+    width: 50px;
+    margin-top: 20px;
+    margin-left: 18px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 2px black;
+    background-color: black;
+    color: white;
+}
+
+.all-clear {
+    background-color: rgba(206, 18, 18, 0.973);
+    box-shadow: 1px 1px 1px 2px black;
+    transition:ease-in-out 0.3s;
+}
+
+.equal-sign {
+    width: 270px;
+    background-color: rgba(43, 131, 245, 0.973);
+    box-shadow: 1px 1px 1px 2px black;
+}

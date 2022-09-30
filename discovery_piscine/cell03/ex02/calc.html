@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="calc.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caluculatrix 9000</title>
+</head>
+<body>
+        <div class="calc">
+
+                <input type="text" class="screen" value="0" id="result" disabled />
+              
+                <div class="calculator-keys">
+              
+                  <button type="button" class="operator" onclick="setValue('+')" value="+">+</button>
+                  <button type="button" class="operator" onclick="setValue('-')" value="-">-</button>
+                  <button type="button" class="operator" onclick="setValue('*')" value="*">&times;</button>
+                  <button type="button" class="operator" onclick="setValue('/')" value="/">&divide;</button>
+                  <button type="button" class="operator" onclick="setValue('%')" value="%">%</button>
+              
+                  <button type="button" value="7" onclick="setValue('7')">7</button>
+                  <button type="button" value="8" onclick="setValue('8')">8</button>
+                  <button type="button" value="9" onclick="setValue('9')">9</button>
+              
+              
+                  <button type="button" value="4" onclick="setValue('4')">4</button>
+                  <button type="button" value="5" onclick="setValue('5')">5</button>
+                  <button type="button" value="6" onclick="setValue('6')">6</button>
+              
+              
+                  <button type="button" value="1" onclick="setValue('1')">1</button>
+                  <button type="button" value="2" onclick="setValue('2')">2</button>
+                  <button type="button" value="3" onclick="setValue('3')">3</button>
+              
+              
+                  <button type="button" value="0" onclick="setValue('0')">0</button>
+                  <button type="button" class="all-clear" value="all-clear" onclick="clearScreen()">AC</button>
+              
+                  <button type="button" class="equal-sign" value="=" onclick="calculate()">=</button>
+              
+                </div>
+              </div>
+              <script>
+                  /* counter variable used to coordinate the changing of colours */
+                  var counter = 0;
+                  function clearScreen() {
+                      document.getElementById("result").value = "";
+                  }
+                
+                  function setValue(val) {
+                      counter++;
+                      if (counter == 1)
+                          document.getElementById("result").value = val;
+                      else
+                          document.getElementById("result").value += val;
+                  }
+                  /* calculation function gets result of the the screen(string), passes into eval
+                    which returns the evaluated answer of the string, also checks for \ % of 0 which returns an error */
+                  function calculate() {
+                        var p = document.getElementById("result").value;
+                        const locator = p.lastIndexOf("/%")
+
+                        if (locator != -1){
+                            console.log(p[locator + 1]);
+                            if(p[locator + 1] == 0) {
+                                window.alert("It’s over 9000!")
+                            }
+                        }
+                        if(!p[0] == '-')
+                            window.alert("Error!");
+                        
+                        var q = eval(p);
+                        console.log(q);
+                        window.alert("The Answer is " + q);
+                        document.getElementById("result").value = q;
+                  }
+                
+                  /* alert message function */
+                  function alertMessage(){
+                      window.alert("Use me ;)");
+                  }
+                  
+                  setInterval(alertMessage, 30000);
+
+
+              </script>
+</body>
+</html>

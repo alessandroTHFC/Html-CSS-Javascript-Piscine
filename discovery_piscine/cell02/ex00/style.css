@@ -1,0 +1,24 @@
+div {
+    height: 300px;
+    width: 50%;
+}
+.mainSection {
+    display: flex;
+
+}   
+.pinkBox {
+    background-color: pink;
+    display: grid;
+    justify-content: center;
+    align-items:center;
+}
+.blackBox {
+    background-color: black;
+    display: grid;
+    justify-content: center;
+    align-items:center;
+}
+p {
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

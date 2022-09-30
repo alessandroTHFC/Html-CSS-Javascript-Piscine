@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="balloon.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="Text">
+        <h1 id="T">Blow Me!</h1>
+    </div>
+
+    <div class="container">
+        <div id="B" class="balloon" onclick="blowMe()" onmouseout="deflate()"></div>
+    </div>
+
+    <div class="Text">
+            <h1 id="T2">Blow Me!</h1>
+    </div>
+
+    <script>
+        
+        var counter = 0;
+
+        function blowMe(){
+            const balloon = document.getElementById("B")
+            const text = document.getElementById("T");
+            const text2 = document.getElementById("T2");
+            let width = balloon.offsetWidth;
+            let height = balloon.offsetHeight;
+
+            balloon.style.height = height + 10 + "px";
+            balloon.style.width = width + 10 + "px";
+
+            if(height > 420) {
+                balloon.style.width = 200 + "px";
+                balloon.style.height = 200 + "px";
+            }
+            
+            switch (counter) {
+                case 0:
+                    balloon.style.backgroundColor = "green";
+                    text.style.color = "red";
+                    text2.style.color = "red";
+                    counter++;
+                    break;
+                case 1:
+                    balloon.style.backgroundColor = "blue";
+                    text.style.color = "green";
+                    text2.style.color = "green";
+                    counter++;
+                    break;
+                case 2:
+                    balloon.style.backgroundColor = "red";
+                    text.style.color = "blue";
+                    text2.style.color = "blue";
+                    counter = 0;
+                    break;
+            }
+          
+        }
+
+        function deflate() {
+            const balloon = document.getElementById("B")
+            let width = balloon.offsetWidth;
+            let height = balloon.offsetHeight;
+            
+            if (height > 200) {
+                balloon.style.height = height - 5 + "px";
+                balloon.style.width = width - 5 + "px";
+            }  
+            switch (counter) {
+                case 0:
+                    balloon.style.backgroundColor = "blue";
+                    counter++;
+                    break;
+                case 1:
+                    balloon.style.backgroundColor = "red";
+                    counter++;
+                    break;
+                case 2:
+                    balloon.style.backgroundColor = "green";
+                    counter = 0;
+                    break;
+            }
+        }
+
+
+    </script>
+</body>
+</html>

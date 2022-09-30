@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(white, rgb(124, 157, 218)) ;
+}
+
+.btnInputBox {
+    justify-content: space-between;
+    margin-bottom: 2vh;
+}
+
+.mainDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: rgba(38, 84, 94, 0.21);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.5px);
+    -webkit-backdrop-filter: blur(7.5px);
+    border: 1px solid rgba(26, 78, 88, 0.3);
+    height: 10vh;
+    width: 60vw;
+    transition: ease-in-out 0.5s;
+}
+
+
+
+.container h1 {
+    color: white;
+    font-size: 50px;
+    padding-left: 12px;
+    font-family: 'Space Mono', monospace;
+}
+
+.inputbox {
+    width: 54vw;
+    height: 40px;
+    border-radius: 16px;
+    border: none;
+    opacity: 0.9;
+    box-shadow: 2px 2px 2px grey;
+}
+
+.inputbox  {
+    font-family: 'Space Mono', monospace;
+    padding-left: 20px;
+    margin-bottom: 5px;
+}
+
+.addBtn {
+    height: 40px;
+    width: 40px;
+    border-radius: 15%;
+    background: red;
+    border:none;
+    box-shadow: 2px 2px 2px grey;
+    color: white;
+    font-size: 20px;
+    transition: 620ms;
+    margin-right: 7px;
+}
+
+.addBtn:hover {
+    background: white;
+    color: red;
+    border: solid red 2px;
+}

@@ -1,0 +1,33 @@
+.para1 {
+    display: flex;
+    background-image: url("para2.jpeg");
+    height: 750px;
+    justify-content: center;
+    align-items: center;
+    background-attachment: fixed;
+    
+}
+
+
+.blackSection {
+    display: flex;
+    background-color: black;
+    height: 120px;
+    width: 100%;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    background-attachment: fixed;
+}
+
+.para2 {
+    background-image: url("para1.jpeg");
+    display: flex;
+    height: 750px;
+    justify-content: center;
+    align-items: center;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
